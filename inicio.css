@@ -61,7 +61,7 @@ header nav a:not(.botao_header):hover::after {
     width: 100%;
 }
 
-.botao {
+.button {
     background: #c2b262;
     color: white;
     border: none;
