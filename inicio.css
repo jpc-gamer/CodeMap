@@ -103,6 +103,8 @@ header nav a:not(.botao_header):hover::after {
 .principal {
     display: flex;
     align-items: center;
+    max-width: 1343px;
+    margin: 0 auto;
     gap: 50px;
     padding: 50px;
 }
@@ -339,11 +341,4 @@ header nav a:not(.botao_header):hover::after {
 .copy {
     font-size: 12px;
     color: #aaa;
-}
-
-@media (min-width: 1920px) {
-    .principal {
-        max-width: 1600px;
-        margin: 0 auto;
-    }
 }
