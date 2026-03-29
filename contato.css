@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
-/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +11,6 @@ body {
     background: #f5f6fa7a;
 }
 
-/* HEADER */
 header {
     display: flex;
     justify-content: space-between;
@@ -50,22 +48,23 @@ nav a {
     position: relative;
 }
 
-nav a:not(.botao)::after {
+header nav a:not(.botao_header)::after {
     content: "";
     position: absolute;
     left: 0;
     bottom: -4px;
     width: 0;
     height: 2px;
-    background: #182749;
+    background: #0b1b2b;
     transition: 0.3s;
 }
 
-nav a:not(.botao):hover::after {
+header nav a:not(.botao_header):hover::after {
     width: 100%;
 }
 
-.botao {
+
+.botao_header {
     background: #0b1b2b;
     color: white;
     border: none;
@@ -76,7 +75,6 @@ nav a:not(.botao):hover::after {
     text-decoration: none;
 }
 
-/* CONTATO */
 .contato {
     padding: 80px 10%;
 }
@@ -106,10 +104,10 @@ nav a:not(.botao):hover::after {
     padding: 30px;
 }
 
-/* INFO */
 .info {
     margin-top: 20px;
 }
+
 .info h3 {
     font-size: 28px;
     color: #0f172a;
@@ -152,9 +150,9 @@ nav a:not(.botao):hover::after {
 .valor {
     font-size: 16px;
     font-weight: 600;
+    color: #0f172a;
 }
 
-/* FORMULÁRIO */
 .formulario {
     flex: 1.8;
     background: #ffffff;
@@ -196,6 +194,7 @@ textarea {
     border-radius: 8px;
     outline: none;
 }
+
 .enviar {
     width: 50%;
     display: block;
@@ -213,7 +212,6 @@ textarea,
 button {
     font-family: 'Poppins', sans-serif;
 }
-/* RODAPÉ */
 
 .footer {
     background-color: #1f2a38;
@@ -222,7 +220,6 @@ button {
     padding: 30px 20px;
 }
 
-/* DIV DOS ÍCONES */
 .icons {
     display: flex;
     justify-content: center;
@@ -243,13 +240,15 @@ button {
     transition: 0.3s;
 }
 
-/* HOVER ÍCONES */
 .icons a:hover {
     transform: scale(1.2);
     background-color: #3f5370;
 }
 
-/* MENU */
+.icons img {
+    width: 100%;
+}
+
 .menu-footer {
     display: flex;
     justify-content: center;
@@ -264,16 +263,10 @@ button {
     transition: 0.3s;
 }
 
-.icons img {
-    width: 100%;
-}
-
-/* HOVER MENU */
 .menu-footer a:hover {
     color: #fff;
 }
 
-/* LINHA */
 .footer hr {
     border: none;
     height: 1px;
@@ -282,7 +275,6 @@ button {
     width: 80%;
 }
 
-/* COPYRIGHT */
 .copy {
     font-size: 12px;
     color: #aaa;

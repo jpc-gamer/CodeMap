@@ -46,22 +46,22 @@ nav a {
     position: relative;
 }
 
-nav a:not(.botao)::after {
+header nav a:not(.botao_header)::after {
     content: "";
     position: absolute;
     left: 0;
     bottom: -4px;
     width: 0;
     height: 2px;
-    background: #182749;
+    background: #0b1b2b;
     transition: 0.3s;
 }
 
-nav a:not(.botao):hover::after {
+header nav a:not(.botao_header):hover::after {
     width: 100%;
 }
 
-.botao {
+.botao_header {
     background: #0b1b2b;
     color: white;
     border: none;
@@ -71,8 +71,6 @@ nav a:not(.botao):hover::after {
     font-size: 16px;
     text-decoration: none;
 }
-
-/* Sobre */
 
 .sobre {
     background-color: #101828;
@@ -88,12 +86,10 @@ nav a:not(.botao):hover::after {
 
 .sobre p {
     text-align: center;
-    color:#f5f5f5;
+    color: #f5f5f5;
     font-size: 20px;
     margin-bottom: 6px;
 }
-
-/* Missão */
 
 .conteudomissao {
     display: flex;
@@ -148,8 +144,6 @@ nav a:not(.botao):hover::after {
     margin-bottom: 5px;
 }
 
-/* Valores */
-
 .valores {
     background-color: #ffffff;
     padding: 50px 80px;
@@ -203,9 +197,6 @@ nav a:not(.botao):hover::after {
     margin-bottom: 10px;
 }
 
-
-/* Rodapé */
-
 .footer {
     background-color: #1f2a38;
     color: #fff;
@@ -213,7 +204,6 @@ nav a:not(.botao):hover::after {
     padding: 30px 20px;
 }
 
-/* DIV DOS ÍCONES */
 .icons {
     display: flex;
     justify-content: center;
@@ -234,13 +224,11 @@ nav a:not(.botao):hover::after {
     transition: 0.3s;
 }
 
-/* HOVER ÍCONES */
 .icons a:hover {
     transform: scale(1.2);
     background-color: #3f5370;
 }
 
-/* MENU */
 .menu-footer {
     display: flex;
     justify-content: center;
@@ -259,12 +247,10 @@ nav a:not(.botao):hover::after {
     width: 100%;
 }
 
-/* HOVER MENU */
 .menu-footer a:hover {
     color: #fff;
 }
 
-/* LINHA */
 .footer hr {
     border: none;
     height: 1px;
@@ -273,7 +259,6 @@ nav a:not(.botao):hover::after {
     width: 80%;
 }
 
-/* COPYRIGHT */
 .copy {
     font-size: 12px;
     color: #aaa;
