@@ -279,3 +279,10 @@ button {
     font-size: 12px;
     color: #aaa;
 }
+
+@media (min-width: 1920px) {
+    .formulario {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
