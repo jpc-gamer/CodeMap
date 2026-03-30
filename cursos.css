@@ -157,16 +157,17 @@ header nav a:not(.botao_header):hover::after {
     margin-top: auto;
 }
 
-button {
+.button {
     background: #0b1b2b;
     color: white;
     border: none;
-    padding: 8px 15px;
+    padding: 6px 13px;
     border-radius: 8px;
     cursor: pointer;
+    text-decoration: none;
 }
 
-button:hover {
+.button:hover {
     background: #162d6b;
 }
 
