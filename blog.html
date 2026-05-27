@@ -2,9 +2,11 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-     <meta name="Julia Peres e Isabela Morresi" content="Mackenzie">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Julia Peres e Isabela Morresi" content="Mackenzie">
     <title>Em breve</title>
     <link rel="stylesheet" href="blog.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -15,12 +17,18 @@
             <span class="ponto"></span>
         </div>
 
-        <nav>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            ☰
+        </div>
+
+        <nav id="menu">
+            <div class="fechar" onclick="toggleMenu()">✕</div>
+
             <a href="inicio.html">Inicio</a>
             <a href="cursos.html">Cursos</a>
             <a href="blog.html">Blog</a>
             <a href="contato.html">Contato</a>
-            <a href="saibamais.html" class="botao">Saiba mais</a>
+            <a href="saibamais.html" class="botao_header">Saiba mais</a>
         </nav>
     </header>
 

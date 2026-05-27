@@ -265,3 +265,114 @@ header nav a:not(.botao_header):hover::after {
   font-size: 12px;
   color: #aaa;
 }
+
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.fechar {
+    display: none;
+}
+
+
+@media (max-width: 768px) {
+
+  header {
+        padding: 20px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background: white;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 30px;
+        gap: 20px;
+        transition: 0.3s;
+    }
+
+    nav.ativo {
+        right: 0;
+    }
+
+    .fechar {
+        display: block;
+        font-size: 26px;
+        margin-bottom: 20px;
+        cursor: pointer;
+    }
+
+    nav a {
+        font-size: 18px;
+    }
+
+
+  .sobre {
+    padding: 40px 30px;
+  }
+
+  .sobre h1 {
+    font-size: 28px;
+  }
+
+  .sobre p {
+    font-size: 16px;
+    margin: 0;
+  }
+
+  .conteudomissao {
+    flex-direction: column;
+    padding: 30px 24px;
+    gap: 30px;
+  }
+
+  .imagemmissao {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .imagemmissao img {
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .textomissao h1 {
+    font-size: 26px;
+  }
+
+  .textomissao p {
+    font-size: 16px;
+  }
+
+  .valores {
+    padding: 30px 24px;
+  }
+
+  .valores h1 {
+    font-size: 26px;
+  }
+
+  .valores > p {
+    font-size: 16px;
+  }
+
+  .cardsvalores {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .menu-footer {
+    gap: 16px;
+  }
+}

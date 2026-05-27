@@ -118,72 +118,94 @@ header nav a:not(.botao_header):hover::after {
   color: #0b1a3d;
   font-style: italic;
   margin-bottom: 15px;
-}
+  }
 
 .carrossel-area {
-  flex: 2.5;
-  overflow: hidden;
+    width: 70%;
+    margin: auto;
 }
 
 .carrossel-container {
-  width: 100%;
-  overflow: hidden;
+    width: 100%;
+    overflow: hidden;
 }
 
 .carrossel-grupo {
-  display: flex;
-  transition: transform 0.6s ease-in-out;
+    display: flex;
+    transition: transform 0.5s ease;
 }
 
 .grupo-cards {
-  display: flex;
-  min-width: 100%;
-  gap: 20px;
-  padding: 10px 0;
+    min-width: 100%;
+    display: flex;
+    gap: 20px;
 }
 
 .card {
-  flex: 1;
-  background: #fff;
-  border-radius: 12px;
-  border: 1px solid #eee;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  transition: 0.3s;
+    flex: 1;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #ddd;
 }
 
 .card img {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 12px 12px 0 0;
-}
-
-.card:hover {
-  transform: translateY(-10px);
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
 }
 
 .card-conteudo {
-  padding: 20px;
+    padding: 20px;
 }
 
 .card-conteudo h3 {
-  font-size: 18px;
-  color: #0b1a3d;
-  margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .card-conteudo a {
-  text-decoration: none;
-  color: #4a5568;
-  font-weight: bold;
-  font-size: 14px;
+    text-decoration: none;
+    color: #0b1a3d;
+    font-weight: bold;
 }
 
 .controles {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 30px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.botao-redondo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    background: #fff;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+
+.card-conteudo {
+    padding: 20px;
+}
+
+.card-conteudo h3 {
+    margin-bottom: 10px;
+}
+
+.card-conteudo a {
+    text-decoration: none;
+    color: #0b1a3d;
+    font-weight: bold;
+}
+
+.controles {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 .botao-redondo {
@@ -341,4 +363,146 @@ header nav a:not(.botao_header):hover::after {
 .copy {
   font-size: 12px;
   color: #aaa;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.fechar {
+    display: none;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    header {
+        padding: 20px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background: white;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 30px;
+        gap: 20px;
+        transition: 0.3s;
+    }
+
+    nav.ativo {
+        right: 0;
+    }
+
+    .fechar {
+        display: block;
+        font-size: 26px;
+        margin-bottom: 20px;
+        cursor: pointer;
+    }
+
+    nav a {
+        font-size: 18px;
+    }
+
+    .topo {
+    width: 100%;
+    height: 260px;
+    padding: 20px;
+    background-image:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url("img/home.png");
+    background-size: cover;
+    background-position: 75% center;
+    align-items: center;
+}
+
+    .topo h1 {
+    font-size: 22px;
+    line-height: 1.3;
+    color: white;
+  }
+
+    .conteudo-topo {
+        max-width: 100%;
+    }
+
+    .button{
+      font-size: 14px;
+      padding: 10px;
+    }
+    .principal {
+        flex-direction: column;
+    }
+
+    .carrossel-area {
+        flex-direction: column;
+    }
+
+    .menu-footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+     .carrossel-area {
+        width: 100%;
+    }
+
+    .carrossel-grupo {
+        gap: 20px;
+    }
+
+    .grupo-cards {
+        display: contents;
+    }
+
+    .card {
+        min-width: 100%;
+    }
+
+    .video_conteudo iframe {
+        width: 100%;
+        height: 200px;
+    }
+
+    .video-conteudo h1 {
+      font-size: 24px;
+    }
+
+    .video-conteudo p{
+      font-size: 16px;
+      padding: 10px;
+    }
+
+    .porque h2 {
+    font-size: 24px;
+    }
+    
+    .porque .sub {
+      margin-bottom: 10px;
+}
+
+.porque-container {
+  padding: 20px;
+}
+    .video {
+      padding-top: 40px;
+    }
+
+    .texto h1 {
+      font-size: 20px
+    }
+
+    .texto p {
+      text-align: justify;
+    }
 }

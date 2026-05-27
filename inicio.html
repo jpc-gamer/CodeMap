@@ -3,10 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <meta name="Julia Peres e Isabela Morresi" content="Mackenzie">
     <title>CodeMap</title>
     <link rel="stylesheet" href="inicio.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -17,7 +18,13 @@
             <span class="ponto"></span>
         </div>
 
-        <nav>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            ☰
+        </div>
+
+        <nav id="menu">
+            <div class="fechar" onclick="toggleMenu()">✕</div>
+
             <a href="inicio.html">Inicio</a>
             <a href="cursos.html">Cursos</a>
             <a href="blog.html">Blog</a>
@@ -43,69 +50,84 @@
         </div>
 
         <div class="carrossel-area">
-            <div class="carrossel-container">
-                <div class="carrossel-grupo" id="grupo">
 
-                    <div class="grupo-cards">
-                        <div class="card">
-                            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80" alt="Desenvolvimento Full Stack">
-                            <div class="card-conteudo">
-                                <h3>Desenvolvimento Web Full Stack</h3>
-                                <a href="cursos.html">Saiba mais →</a>
-                            </div>
-                        </div>
+    <div class="carrossel-container">
 
-                        <div class="card">
-                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="Python Data Science">
-                            <div class="card-conteudo">
-                                <h3>Python para Data Science</h3>
-                                <a href="cursos.html">Saiba mais →</a>
-                            </div>
-                        </div>
+        <div class="carrossel-grupo" id="grupo">
 
-                        <div class="card">
-                            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=600&q=80" alt="Segurança da Informação">
-                            <div class="card-conteudo">
-                                <h3>Segurança da Informação</h3>
-                                <a href="cursos.html">Saiba mais →</a>
-                            </div>
-                        </div>
+            <!-- GRUPO 1 -->
+            <div class="grupo-cards">
+
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80">
+
+                    <div class="card-conteudo">
+                        <h3>Desenvolvimento Web Full Stack</h3>
+                        <a href="#">Saiba mais →</a>
                     </div>
-
-                    <div class="grupo-cards">
-                        <div class="card">
-                            <img src="https://cdn-wcsm.alura.com.br/2025/04/diagrama-de-design-visual.jpg" alt="UX/UI Design">
-                            <div class="card-conteudo">
-                                <h3>UX/UI Design</h3>
-                                <a href="cursos.html">Saiba mais →</a>
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <img src="https://www.miquido.com/wp-content/uploads/2024/04/header-Top-mobile-app-development-frameworks-1.jpg" alt="Mobile Development">
-                            <div class="card-conteudo">
-                                <h3>Mobile Development</h3>
-                                <a href="cursos.html">Saiba mais →</a>
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=600&q=80" alt="Cloud Computing">
-                            <div class="card-conteudo">
-                                <h3>Cloud Computing</h3>
-                                <a href="cursos.html">Saiba mais →</a>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
+
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80">
+
+                    <div class="card-conteudo">
+                        <h3>Python para Data Science</h3>
+                        <a href="#">Saiba mais →</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=600&q=80">
+
+                    <div class="card-conteudo">
+                        <h3>Segurança da Informação</h3>
+                        <a href="#">Saiba mais →</a>
+                    </div>
+                </div>
+
             </div>
 
-            <div class="controles">
-                <button id="anterior" class="botao-redondo">&lt;</button>
-                <button id="proximo" class="botao-redondo">&gt;</button>
+            <!-- GRUPO 2 -->
+            <div class="grupo-cards">
+
+                <div class="card">
+                    <img src="https://cdn-wcsm.alura.com.br/2025/04/diagrama-de-design-visual.jpg">
+
+                    <div class="card-conteudo">
+                        <h3>UX/UI Design</h3>
+                        <a href="#">Saiba mais →</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://www.miquido.com/wp-content/uploads/2024/04/header-Top-mobile-app-development-frameworks-1.jpg">
+
+                    <div class="card-conteudo">
+                        <h3>Mobile Development</h3>
+                        <a href="#">Saiba mais →</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=600&q=80">
+
+                    <div class="card-conteudo">
+                        <h3>Cloud Computing</h3>
+                        <a href="#">Saiba mais →</a>
+                    </div>
+                </div>
+
             </div>
+
         </div>
+
+    </div>
+
+    <div class="controles">
+        <button id="anterior" class="botao-redondo">&lt;</button>
+        <button id="proximo" class="botao-redondo">&gt;</button>
+    </div>
+</div>
     </section>
 
     <section class="video">
