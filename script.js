@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+    
     const grupo =
         document.getElementById("grupo");
 
@@ -19,6 +20,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function atualizarCarrossel() {
 
+    
+        if (!grupo || cards.length === 0) {
+            return;
+        }
+
         // MOBILE
         if (window.innerWidth <= 768) {
 
@@ -37,46 +43,50 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    btnProximo.addEventListener("click", () => {
+    
+    if (btnProximo && btnAnterior && grupo) {
 
-        // MOBILE
-        if (window.innerWidth <= 768) {
+        btnProximo.addEventListener("click", () => {
 
-            if (index < cards.length - 1) {
-                index++;
+            // MOBILE
+            if (window.innerWidth <= 768) {
+
+                if (index < cards.length - 1) {
+                    index++;
+                }
             }
 
-        }
+            // DESKTOP
+            else {
 
-        // DESKTOP
-        else {
-
-            if (index < grupos.length - 1) {
-                index++;
+                if (index < grupos.length - 1) {
+                    index++;
+                }
             }
 
-        }
+            atualizarCarrossel();
+        });
 
-        atualizarCarrossel();
-    });
+        btnAnterior.addEventListener("click", () => {
 
-    btnAnterior.addEventListener("click", () => {
+            if (index > 0) {
+                index--;
+            }
 
-        if (index > 0) {
-            index--;
-        }
+            atualizarCarrossel();
+        });
 
-        atualizarCarrossel();
-    });
+        window.addEventListener("resize", () => {
 
-    window.addEventListener("resize", () => {
+            index = 0;
 
-        index = 0;
-        atualizarCarrossel();
-    });
+            atualizarCarrossel();
+        });
+    }
 
-    // FORMULÁRIO
-    const form = document.getElementById("formContato");
+    
+    const form =
+        document.getElementById("formContato");
 
     if (form) {
 
@@ -92,6 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
             inputs.forEach(function (campo) {
 
                 if (campo.value.trim() === "") {
+
                     valido = false;
                 }
             });
@@ -99,6 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (!valido) {
 
                 alert("Por favor, preencha todos os campos!");
+
                 return;
             }
 
@@ -107,9 +119,9 @@ document.addEventListener("DOMContentLoaded", () => {
             form.reset();
         });
     }
-
 });
 
+// MENU
 function toggleMenu() {
 
     document
